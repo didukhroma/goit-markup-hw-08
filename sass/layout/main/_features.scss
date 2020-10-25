@@ -1,0 +1,50 @@
+.features {
+  padding-top: 94px;
+  padding-bottom: 47px;
+
+  background-color: $white-color;
+
+  &__title {
+    @extend %section-title;
+    @extend %visually-hidden;
+  }
+}
+
+.features-list {
+  @extend %list;
+  @extend %centered;
+  &__item {
+    max-width: calc((100% - 60px) / 3);
+  }
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__subtitle {
+    margin-bottom: 10px;
+
+    @include font(700, 14px, 16px);
+    text-transform: uppercase;
+
+    color: $primary-text-color;
+  }
+  &__description {
+    @include font(400, 14px, 24px);
+
+    color: $secondary-text-color;
+  }
+  &__pic {
+    @extend %centered;
+
+    width: 270px;
+    height: 120px;
+
+    border-radius: 4px;
+    margin-bottom: 30px;
+
+    background: #f5f4fa;
+  }
+  &__icon {
+    width: 70px;
+    height: 70px;
+  }
+}

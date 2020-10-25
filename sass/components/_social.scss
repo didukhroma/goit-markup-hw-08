@@ -1,0 +1,34 @@
+.social {
+  @extend %centered;
+  @extend %list;
+
+  &__link {
+    @extend %link;
+    display: inline-flex;
+
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+
+    border: none;
+    border-radius: 50%;
+
+    color: $icon-color;
+
+    transition: color $transition-time $transition-function, background-color $transition-time $transition-function;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $white-color;
+    background-color: $accent-color;
+  }
+}

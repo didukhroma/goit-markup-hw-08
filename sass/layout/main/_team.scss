@@ -1,0 +1,54 @@
+.team {
+  @extend %centered;
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  background-color: #f5f4fa;
+
+  &__title {
+    @extend %section-title;
+    margin-bottom: 50px;
+  }
+}
+
+.team-list {
+  @extend %centered;
+  @extend %list;
+
+  &--grid {
+    margin: -15px;
+  }
+
+  &__item {
+    margin: 15px;
+    max-width: calc((100% - 4 * 30px) / 4);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__description {
+    @extend %centered;
+    flex-direction: column;
+    padding: 30px 0;
+    margin: 0 auto;
+
+    background-color: #ffffff;
+    border-radius: inherit;
+  }
+
+  &__title,
+  &__text {
+    @include font(400, 16px, 19px);
+
+    color: $primary-text-color;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    color: $secondary-text-color;
+  }
+}

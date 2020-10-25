@@ -1,0 +1,16 @@
+.logo {
+  @extend %link;
+  font-family: $secondary-font-family;
+
+  @include font(700, 26px, 31px);
+
+  color: $accent-color;
+
+  &__text {
+    color: #000000;
+  }
+
+  &__text--inverse {
+    color: #ffffff;
+  }
+}

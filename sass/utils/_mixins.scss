@@ -1,0 +1,40 @@
+@mixin page-header-list($type) {
+  @each $var in $type {
+    .#{$var} {
+      @extend %centered;
+      @extend %list;
+
+      &__item:not(:last-child) {
+        margin-right: 50px;
+      }
+
+      &__link {
+        @extend %link;
+        display: inline-flex;
+
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.143;
+        letter-spacing: 0.02em;
+
+        color: $primary-text-color;
+
+        transition: color $transition-time $transition-function;
+      }
+
+      &__link:hover,
+      &__link:focus {
+        color: $accent-color;
+      }
+    }
+  }
+}
+
+@mixin font($font-weight, $font-size, $line-height) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height/$font-size;
+}

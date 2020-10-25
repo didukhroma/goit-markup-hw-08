@@ -1,0 +1,10 @@
+@include page-header-list(contact);
+
+.contact__link {
+  color: $secondary-text-color;
+}
+.contact__icon {
+  margin-right: 10px;
+
+  fill: currentColor;
+}

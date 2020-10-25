@@ -1,0 +1,32 @@
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__slogan {
+    display: block;
+    margin-bottom: 20px;
+
+    @include font(700, 14px, 16px);
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+  &__container {
+    @extend %centered;
+    align-items: baseline;
+  }
+  &__contact {
+    min-width: 231px;
+    margin-right: 70px;
+  }
+  &__logo {
+    margin-bottom: 20px;
+  }
+  &__join {
+    margin-right: 93px;
+  }
+  &__subscribe {
+    flex-grow: 1;
+  }
+}

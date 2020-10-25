@@ -1,0 +1,7 @@
+.nav {
+  @extend %centered;
+
+  &__logo {
+    margin-right: 93px;
+  }
+}

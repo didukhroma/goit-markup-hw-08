@@ -1,0 +1,45 @@
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  text-align: center;
+
+  
+  &__title {
+    @extend %section-title;
+    margin-bottom: 50px;
+  }
+}
+
+.clients-list {
+  @extend %list;
+  @extend %centered;
+  
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  
+  &__link {
+    @extend %link;
+    @extend %centered;
+
+    display: inline-flex; 
+    
+    width: 170px;
+    height: 90px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    color: $icon-color;
+
+    transition: color $transition-time $transition-function, border-color $transition-time $transition-function;
+  }
+  
+  &__icon {
+    fill: currentColor;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+}
