@@ -1,10 +1,13 @@
 @include page-header-list(contact);
+.contact {
+  @extend %visually-hidden;
 
-.contact__link {
-  color: $secondary-text-color;
-}
-.contact__icon {
-  margin-right: 10px;
+  &__link {
+    color: $secondary-text-color;
+  }
+  &__icon {
+    margin-right: 10px;
 
-  fill: currentColor;
+    fill: currentColor;
+  }
 }

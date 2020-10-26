@@ -1,7 +1,19 @@
 .nav {
-  @extend %centered;
-
+  //@extend %centered;
+  //justify-content: space-between;
+  &__wrapper {
+    @extend %centered;
+  }
   &__logo {
-    margin-right: 93px;
+    margin-right: auto;
+    // margin-right: 93px;
+  }
+  &__button {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+  }
+  &__icon {
+    @extend %centered;
   }
 }

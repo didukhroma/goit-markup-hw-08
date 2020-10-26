@@ -1,8 +1,9 @@
 .logo {
+  display: inline-block;
   @extend %link;
   font-family: $secondary-font-family;
 
-  @include font(700, 26px, 31px);
+  @include font(700, 24px, 28px);
 
   color: $accent-color;
 
@@ -12,5 +13,8 @@
 
   &__text--inverse {
     color: #ffffff;
+  }
+  @media screen and (min-width: $desktop) {
+    @include font(700, 26px, 31px);
   }
 }

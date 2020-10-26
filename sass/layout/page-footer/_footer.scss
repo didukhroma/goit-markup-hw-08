@@ -2,6 +2,7 @@
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+  text-align: center;
 
   &__slogan {
     display: block;
@@ -14,19 +15,28 @@
   }
   &__container {
     @extend %centered;
-    align-items: baseline;
+    flex-direction: column;
+    //align-items: baseline;
   }
   &__contact {
+    //@extend %centered;
+    //flex-direction: column;
+
     min-width: 231px;
-    margin-right: 70px;
+    //margin-right: 70px;
   }
   &__logo {
     margin-bottom: 20px;
   }
-  &__join {
-    margin-right: 93px;
+
+  &__address {
+    margin-bottom: 60px;
   }
-  &__subscribe {
-    flex-grow: 1;
+  &__join {
+    margin-bottom: 60px;
+    // margin-right: 93px;
+    //}
+    //&__subscribe {
+    // flex-grow: 1;
   }
 }

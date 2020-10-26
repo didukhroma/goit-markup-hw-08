@@ -1,21 +1,25 @@
 @include page-header-list(site-nav);
 
-.site-nav__link--current {
-  position: relative;
+.site-nav {
+  @extend %visually-hidden;
 
-  color: $accent-color;
+  &__link--current {
+    position: relative;
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 1;
+    color: $accent-color;
 
-    width: 100%;
-    height: 4px;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
 
-    background: $accent-color;
-    border-radius: 2px;
+      width: 100%;
+      height: 4px;
+
+      background: $accent-color;
+      border-radius: 2px;
+    }
   }
 }

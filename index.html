@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
     <!--
-    <link rel="stylesheet" href="./css/styles.css" />
-    -->
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />-->
+    <link rel="stylesheet" href="./css/main-style.min.css" />
   </head>
 
   <body class="page-body">
@@ -17,7 +16,16 @@
     <header class="page-header">
       <div class="container page-header__container">
         <nav class="nav page-header__nav">
-          <a class="logo link nav__logo" href="./index.html" aria-label="вебстудия" lang="en">Web<span class="logo__text">Studio</span></a>
+          <div class="nav__wrapper">
+            <a class="logo nav__logo" href="./index.html" aria-label="вебстудия" lang="en">Web<span class="logo__text">Studio</span></a>
+
+            <button class="nav__button" type="button">
+              <svg class="nav__icon" width="40" height="40">
+                <use href="./images/sprite.svg#icon-menu"></use>
+                <use href="./images/sprite.svg#icon-close-menu"></use>
+              </svg>
+            </button>
+          </div>
 
           <ul class="site-nav">
             <li class="site-nav__item"><a class="site-nav__link site-nav__link--current" href="./index.html">Студия</a></li>
@@ -134,7 +142,7 @@
           <ul class="team-list team-list--grid">
             <!-- Igor-Demianenko -->
             <li class="team-list__item">
-              <img class="team-list__img" src="./images/team/img-1.jpg" alt="Фото Игорь Демьяненко" aria-label="Игорь Демьяненко" width="270" height="260" />
+              <img class="team-list__img" src="./images/team/img-1.jpg" alt="Фото Игорь Демьяненко" aria-label="Игорь Демьяненко" />
               <div class="team-list__description">
                 <h3 class="team-list__title">Игорь Демьяненко</h3>
                 <p class="team-list__text" lang="en">Product Designer</p>
@@ -295,7 +303,7 @@
       <section class="clients">
         <div class="container">
           <h2 class="clients__title">Постоянные клиенты</h2>
-          <ul class="clients-list">
+          <ul class="clients-list clients-list--grid">
             <!-- Client-1 -->
             <li class="clients-list__item">
               <a href="" class="clients-list__link" aria-label="Веб Страница Клиента-1">
@@ -414,7 +422,7 @@
         <div class="footer__contact">
           <a class="logo footer__logo" href="./index.html" aria-label="вебстудия" lang="en">Web<span class="logo__text logo__text--inverse">Studio</span> </a>
 
-          <address class="address">
+          <address class="address footer__address">
             <ul class="address__list">
               <li class="address__item">
                 <a class="address__map" href="https://goo.gl/maps/MZd4GbBzznk5j25o9" aria-label="карта пути к вебстудии" target="_blank"> г. Киев, пр-т Леси Украинки, 26</a>
@@ -485,8 +493,8 @@
       </div>
     </footer>
 
-    <!--Fix Header-->
-    <script src="./js/fixheader.js"></script>
+    <!--Fix Header
+    <script src="./js/fixheader.js"></script>-->
     <!--Modal-->
     <script src="./js/modal.js"></script>
     <!-- Speaker Form 

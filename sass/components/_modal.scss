@@ -11,7 +11,7 @@
 
   opacity: 1;
   visibility: visible;
-  overflow-y: auto;
+  overflow-y: scroll;
 
   transition: opacity $transition-time $transition-function, visibility $transition-time $transition-function;
 

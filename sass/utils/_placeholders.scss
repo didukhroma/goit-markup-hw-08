@@ -1,4 +1,5 @@
 @import "./mixins";
+@import "./brakepoints";
 
 %centered {
   display: flex;
@@ -23,8 +24,11 @@
 
 %section-title {
   text-align: center;
+  @include font(700, 28px, 33px);
 
-  @include font(700, 36px, 42px);
+  @media screen and (min-width: $desktop) {
+    @include font(700, 36px, 42px);
+  }
 
   color: $primary-text-color;
 }
