@@ -1,25 +1,43 @@
-@include page-header-list(site-nav);
+//@include page-header-list(site-nav);
 
 .site-nav {
-  @extend %visually-hidden;
+  @extend %list;
+  @include font(500, 18px, 21px);
+  letter-spacing: 0.02em;
 
-  &__link--current {
-    position: relative;
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &__link {
+    text-decoration: none;
+    color: $primary-text-color;
 
-    color: $accent-color;
+    transition: color $transition-time $transition-function;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      z-index: 1;
+    &--current {
+      position: relative;
 
-      width: 100%;
-      height: 4px;
+      padding: 8px 0;
 
-      background: $accent-color;
-      border-radius: 2px;
+      color: $accent-color;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+
+        width: 100%;
+        height: 4px;
+
+        background: $accent-color;
+        border-radius: 2px;
+      }
     }
   }
 }
