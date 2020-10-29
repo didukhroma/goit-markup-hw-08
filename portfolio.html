@@ -12,35 +12,46 @@
   <body class="page-body">
     <!--Header site-->
     <header class="page-header">
-      <div class="container page-header__container">
-        <nav class="nav page-header__nav">
-          <a class="logo link nav__logo" href="./index.html" aria-label="вебстудия" lang="en">Web<span class="logo__text">Studio</span></a>
+      <div class="container">
+        <nav class="nav">
+          <div class="nav__wrapper">
+            <a class="logo nav__logo" href="./index.html" aria-label="вебстудия" lang="en">Web<span class="logo__text">Studio</span></a>
 
-          <ul class="site-nav">
-            <li class="site-nav__item"><a class="site-nav__link" href="./index.html">Студия</a></li>
-            <li class="site-nav__item"><a class="site-nav__link site-nav__link--current" href="./portfolio.html">Портфолио</a></li>
-            <li class="site-nav__item"><a class="site-nav__link" href="">Контакты</a></li>
-          </ul>
+            <button class="nav__button" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+              <svg class="nav__icon" width="40" height="40" aria-label="переключатель меню">
+                <use class="nav__icon--open" href="./images/sprite.svg#icon-menu"></use>
+                <use class="nav__icon--close" href="./images/sprite.svg#icon-close-menu"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="menu" id="menu-container" data-menu>
+            <ul class="site-nav menu__site-nav">
+              <li class="site-nav__item"><a class="site-nav__link" href="./index.html">Студия</a></li>
+              <li class="site-nav__item"><a class="site-nav__link site-nav__link--current" href="./portfolio.html">Портфолио</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="">Контакты</a></li>
+            </ul>
+
+            <ul class="contact">
+              <li class="contact__item">
+                <a class="contact__link" href="mailto:info@devstudio.com">
+                  <svg class="contact__icon" width="16" height="12">
+                    <use href="./images/sprite.svg#icon-mail"></use>
+                  </svg>
+                  <span lang="en">info@devstudio.com</span>
+                </a>
+              </li>
+              <li class="contact__item">
+                <a class="contact__link" href="tel:+380961111111">
+                  <svg class="contact__icon" width="10" height="16">
+                    <use href="./images/sprite.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
-
-        <ul class="contact">
-          <li class="contact__item">
-            <a class="contact__link" href="mailto:info@devstudio.com">
-              <svg class="contact__icon" width="16" height="12">
-                <use href="./images/sprite.svg#icon-mail"></use>
-              </svg>
-              <span lang="en">info@devstudio.com</span>
-            </a>
-          </li>
-          <li class="contact__item">
-            <a class="contact__link" href="tel:+380961111111">
-              <svg class="contact__icon" width="10" height="16">
-                <use href="./images/sprite.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
       </div>
     </header>
 
@@ -48,7 +59,7 @@
     <main>
       <section class="portfolio">
         <div class="container">
-          <h1 class="portfolio__title">Портфолио</h1>
+          <h1 class="visually-hidden">Портфолио</h1>
 
           <!--Filters-->
           <ul class="filters portfolio__filters">
@@ -304,9 +315,11 @@
       </div>
     </footer>
 
-    <!--Fix Header-->
-    <script src="./js/fixheader.js"></script>
+    <!--Fix Header
+    <script src="./js/fixheader.js"></script>-->
     <!-- Speaker Form 
     <script src="./js/speakerform.js"></script>-->
+    <!--Menu-->
+    <script src="./js/menu.js"></script>
   </body>
 </html>
