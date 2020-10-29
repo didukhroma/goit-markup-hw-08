@@ -10,11 +10,11 @@
   &__map,
   &__link {
     @extend %link;
-    @include font(400, 14px, 24px);
+    @include font($main-font-family, 400, 14px, 24px);
 
     color: rgba(255, 255, 255, 0.6);
 
-    transition: color $transition-time $transition-function;
+    @include transition(color);
   }
   &__map {
     color: #ffffff;

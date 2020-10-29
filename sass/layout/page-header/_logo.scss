@@ -1,9 +1,7 @@
 .logo {
   display: inline-block;
   @extend %link;
-  font-family: $secondary-font-family;
-
-  @include font(700, 24px, 28px);
+  @include font($secondary-font-family, 700, 24px, 28px);
 
   color: $accent-color;
 
@@ -15,6 +13,6 @@
     color: #ffffff;
   }
   @media screen and (min-width: $desktop) {
-    @include font(700, 26px, 31px);
+    @include font($secondary-font-family, 700, 26px, 31px);
   }
 }

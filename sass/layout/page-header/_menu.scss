@@ -1,28 +1,4 @@
-.menu__button {
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-}
-
-.menu__button .menu__icon--close {
-  display: none;
-}
-
-.menu__button.is-open .menu__icon--close {
-  display: block;
-}
-
-.menu__button.is-open .menu__icon--open {
-  display: none;
-}
-
-.menu__container {
+.menu {
   background-color: $white-color;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
   padding: 52px 0 60px;
@@ -46,7 +22,7 @@
     justify-content: space-between;
     flex-grow: 1;
   }
-}
-.menu__nav {
-  margin-bottom: 52px;
+  &__site-nav {
+    margin-bottom: 52px;
+  }
 }

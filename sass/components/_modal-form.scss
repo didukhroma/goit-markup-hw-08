@@ -22,9 +22,7 @@
 
     margin-bottom: 4px;
 
-    @include font(400, 12px, 14px);
-
-    letter-spacing: 0.01em;
+    @include font($main-font-family, 400, 12px, 14px, 0.01em);
 
     color: $secondary-text-color;
   }
@@ -38,20 +36,18 @@
 
     width: 370px;
 
-    @include font(400, 14px, 16px);
+    @include font($main-font-family, 400, 14px, 16px);
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     background-color: transparent;
     color: $secondary-text-color;
 
-    transition: border-color $transition-time $transition-function;
+    @include transition(border-color);
   }
 
   &__input::placeholder {
-    @include font(400, 12px, 14px);
-
-    letter-spacing: 0.01em;
+    @include font($main-font-family, 400, 12px, 14px, 0.01em);
   }
 
   &__textarea {
@@ -64,16 +60,13 @@
     height: 120px;
     width: 100%;
 
-    @include font(400, 14px, 16px);
-
-    letter-spacing: 0.01em;
+    @include font($main-font-family, 400, 14px, 16px, 0.01em);
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
     color: $secondary-text-color;
-
-    transition: border-color $transition-time $transition-function;
+    @include transition(border-color);
   }
 
   &__textarea::placeholder {
@@ -89,7 +82,7 @@
     width: 18px;
     height: 18px;
 
-    transition: fill $transition-time $transition-function;
+    @include transition(fill);
   }
 
   &__input:focus + &__icon {
@@ -119,8 +112,7 @@
     display: inline-flex;
     // padding-left: 12px;
 
-    @include font(400, 12px, 14px);
-    letter-spacing: 0.03em;
+    @include font($main-font-family, 400, 12px, 14px);
     //@include font(400, 14px, 24px);
 
     color: $secondary-text-color;
@@ -141,7 +133,8 @@
     background-size: cover;
     background-origin: border-box;
 
-    transition: background-color $transition-time $transition-function, border-color $transition-time $transition-function;
+    @include transition(background-color);
+    @include transition(border-color);
   }
 
   &__input {

@@ -1,17 +1,10 @@
 .page-header {
   position: relative;
   padding: 10px 0;
-  //top: 0;
-  //  left: 50%;
-  // transform: translateX(-50%);
-  // z-index: 1;
 
   width: 100%;
 
   background-color: #ffffff;
-  //&__container {
-  //   @extend %centered;
-  //}
 
   &::after {
     content: "";
@@ -23,9 +16,5 @@
     width: 100%;
 
     border-bottom: 1px solid #ececec;
-  }
-
-  &__nav {
-    margin-right: auto;
   }
 }

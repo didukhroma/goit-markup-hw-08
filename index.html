@@ -6,29 +6,27 @@
     <title lang="en">WebStudio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
-    <!--
-    <link rel="stylesheet" href="./css/main.min.css" />-->
-    <link rel="stylesheet" href="./css/main-style.min.css" />
+        <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body class="page-body">
     <!--Header site-->
     <header class="page-header">
-      <div class="container page-header__container">
-        <nav class="nav page-header__nav">
+      <div class="container ">
+        <nav class="nav">
           <div class="nav__wrapper">
             <a class="logo nav__logo" href="./index.html" aria-label="вебстудия" lang="en">Web<span class="logo__text">Studio</span></a>
 
-            <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
-              <svg class="menu__icon" width="40" height="40" aria-label="переключатель меню">
-                <use class="menu__icon--open" href="./images/sprite.svg#icon-menu"></use>
-                <use class="menu__icon--close" href="./images/sprite.svg#icon-close-menu"></use>
+            <button class="nav__button" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+              <svg class="nav__icon" width="40" height="40" aria-label="переключатель меню">
+                <use class="nav__icon--open" href="./images/sprite.svg#icon-menu"></use>
+                <use class="nav__icon--close" href="./images/sprite.svg#icon-close-menu"></use>
               </svg>
             </button>
           </div>
 
-          <div class="menu__container" id="menu-container" data-menu>
-          <ul class="site-nav menu__nav">
+          <div class="menu" id="menu-container" data-menu>
+          <ul class="site-nav menu__site-nav">
             <li class="site-nav__item"><a class="site-nav__link site-nav__link--current" href="./index.html">Студия</a></li>
             <li class="site-nav__item"><a class="site-nav__link" href="./portfolio.html">Портфолио</a></li>
             <li class="site-nav__item"><a class="site-nav__link" href="">Контакты</a></li>
@@ -68,11 +66,11 @@
       </section>
 
       <!--Особенности-->
-      <section class="features">
+      <section class="features ">
         <div class="container">
-          <h2 class="features__title visually-hidden">Особенности</h2>
+          <h2 class="visually-hidden">Особенности</h2>
 
-          <ul class="list features-list">
+          <ul class="features-list">
             <li class="features-list__item">
               <div class="features-list__pic">
                 <svg class="features-list__icon">
@@ -114,7 +112,7 @@
       </section>
 
       <!--Servises-->
-      <section class="servises">
+      <section class="servises visually-hidden">
         <div class="container">
           <h2 class="servises__title">Чем мы занимаемся</h2>
 
@@ -140,11 +138,11 @@
       <!--Our team-->
       <section class="team">
         <div class="container">
-          <h2 class="team__title">Наша команда</h2>
+          <h2 class="section-title team__title ">Наша команда</h2>
           <ul class="team-list team-list--grid">
             <!-- Igor-Demianenko -->
             <li class="team-list__item">
-              <img class="team-list__img" src="./images/team/img-1.jpg" alt="Фото Игорь Демьяненко" aria-label="Игорь Демьяненко" />
+              <img class="team-list__img" src="./images/team/img-1.jpg" alt="Фото Игорь Демьяненко" aria-label="Игорь Демьяненко" width="450" height="460"  />
               <div class="team-list__description">
                 <h3 class="team-list__title">Игорь Демьяненко</h3>
                 <p class="team-list__text" lang="en">Product Designer</p>
@@ -183,7 +181,7 @@
 
             <!-- Olga Repina -->
             <li class="team-list__item">
-              <img class="team-list__img" src="./images/team/img-2.jpg" alt="Фото Ольга Репина" aria-label="Ольга Репина" width="270" height="260" />
+              <img class="team-list__img" src="./images/team/img-2.jpg" alt="Фото Ольга Репина" aria-label="Ольга Репина" width="450" height="460" />
               <div class="team-list__description">
                 <h3 class="team-list__title">Ольга Репина</h3>
                 <p class="team-list__text" lang="en">Frontend Developer</p>
@@ -222,7 +220,7 @@
 
             <!-- Nikolay Tarasov -->
             <li class="team-list__item">
-              <img class="team-list__img" src="./images/team/img-3.jpg" alt="Фото Николай Тарасов" aria-label="Николай Тарасов" width="270" height="260" />
+              <img class="team-list__img" src="./images/team/img-3.jpg" alt="Фото Николай Тарасов" aria-label="Николай Тарасов" width="450" height="460" />
               <div class="team-list__description">
                 <h3 class="team-list__title">Николай Тарасов</h3>
                 <p class="team-list__text" lang="en">Marketing</p>
@@ -261,7 +259,7 @@
 
             <!-- Mihail Ermakov -->
             <li class="team-list__item">
-              <img class="team-list__img" src="./images/team/img-4.jpg" alt="Фото Михаил Ермаков" aria-label="Михаил Ермаков" width="270" height="260" />
+              <img class="team-list__img" src="./images/team/img-4.jpg" alt="Фото Михаил Ермаков" aria-label="Михаил Ермаков" width="450" height="460" />
               <div class="team-list__description">
                 <h3 class="team-list__title">Михаил Ермаков</h3>
                 <p class="team-list__text" lang="en">UI Designer</p>
@@ -304,7 +302,7 @@
       <!-- Our clients -->
       <section class="clients">
         <div class="container">
-          <h2 class="clients__title">Постоянные клиенты</h2>
+          <h2 class="section-title clients__title">Постоянные клиенты</h2>
           <ul class="clients-list clients-list--grid">
             <!-- Client-1 -->
             <li class="clients-list__item">

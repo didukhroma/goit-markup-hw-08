@@ -1,3 +1,4 @@
+@import "./variables";
 @import "./mixins";
 @import "./brakepoints";
 
@@ -24,15 +25,14 @@
 
 %section-title {
   text-align: center;
-  @include font(700, 28px, 33px);
+  @include font($main-font-family, 700, 28px, 33px);
 
   @media screen and (min-width: $desktop) {
-    @include font(700, 36px, 42px);
+    @include font($main-font-family, 700, 36px, 42px);
   }
 
   color: $primary-text-color;
 }
-
 %visually-hidden {
   position: absolute;
   width: 1px;

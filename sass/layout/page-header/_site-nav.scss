@@ -1,9 +1,6 @@
-//@include page-header-list(site-nav);
-
 .site-nav {
   @extend %list;
-  @include font(500, 18px, 21px);
-  letter-spacing: 0.02em;
+  @include font($main-font-family, 500, 18px, 21px, 0.02em);
 
   &__item:not(:last-child) {
     margin-bottom: 32px;
@@ -12,7 +9,7 @@
     text-decoration: none;
     color: $primary-text-color;
 
-    transition: color $transition-time $transition-function;
+    @include transition(color);
     &:hover,
     &:focus {
       color: $accent-color;

@@ -13,18 +13,20 @@
   visibility: visible;
   overflow-y: scroll;
 
-  transition: opacity $transition-time $transition-function, visibility $transition-time $transition-function;
+  @include transition(opacity);
+  @include transition(visibility);
 
   &--is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 
-    transition: opacity $transition-time $transition-function, visibility $transition-time $transition-function;
+    @include transition(opacity);
+    @include transition(visibility);
   }
   &--is-hidden .modal {
     transform: translate(-50%, -50%) scale(0);
-    transition: transform $transition-time $transition-function;
+    @include transition(transform);
   }
 }
 
@@ -43,7 +45,7 @@
   background-color: #ffffff;
 
   transform: translate(-50%, -50%) scale(1);
-  transition: transform $transition-time $transition-function;
+  @include transition(transform);
 
   &__btn {
     position: absolute;
@@ -74,7 +76,7 @@
 
     fill: #000000;
 
-    transition: fill $transition-time $transition-function;
+    @include transition(fill);
   }
 
   &__slogan {
@@ -83,7 +85,7 @@
 
     margin-bottom: 12px;
 
-    @include font(700, 20px, 30px);
+    @include font($main-font-family, 700, 20px, 30px);
 
     //@include font(700, 20px, 23px);
 

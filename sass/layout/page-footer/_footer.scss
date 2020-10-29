@@ -1,14 +1,13 @@
 .footer {
   background-color: #2f303a;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
   text-align: center;
 
   &__slogan {
     display: block;
     margin-bottom: 20px;
 
-    @include font(700, 14px, 16px);
+    @include font($main-font-family, 700, 14px, 16px);
     text-transform: uppercase;
 
     color: #ffffff;

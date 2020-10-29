@@ -1,27 +1,31 @@
+//-------------UTILS----------------------
 @import "./utils/variables";
-@import "./utils/mixins";
+@import "./utils/brakepoints";
 @import "./utils/placeholders";
-//------Base----------------------
-@import "./base/common";
+@import "./utils/mixins";
+@import "./utils/visually-hidden";
+//-------------BASE-----------------------
 @import "./base/container";
-//------Components----------------
+@import "./base/common";
+//-------------COMPONENTS-----------------
 @import "./components/button";
 @import "./components/social";
 @import "./components/modal";
 @import "./components/modal-form";
-//------Page header---------------
+//-------------PAGE HEADER----------------
 @import "./layout/page-header/page-header";
 @import "./layout/page-header/nav";
 @import "./layout/page-header/logo";
+@import "./layout/page-header/menu";
 @import "./layout/page-header/site-nav";
 @import "./layout/page-header/contact";
-//--------Main--------------------
+//--------------MAIN----------------------
 @import "./layout/main/hero";
 @import "./layout/main/features";
-@import "./layout/main/servises";
+//@import "./layout/main/servises";
 @import "./layout/main/team";
 @import "./layout/main/clients";
-//--------Footer------------------
+//--------------PAGE FOOTER---------------
 @import "./layout/page-footer/footer";
 @import "./layout/page-footer/address";
 @import "./layout/page-footer/join";

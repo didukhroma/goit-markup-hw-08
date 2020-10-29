@@ -1,19 +1,40 @@
+@import "../../utils/mixins";
 .nav {
   //@extend %centered;
-  //justify-content: space-between;
   &__wrapper {
     @extend %centered;
+    justify-content: space-between;
   }
-  &__logo {
-    margin-right: auto;
+  /*&__logo {
+    // margin-right: auto;
     // margin-right: 93px;
-  }
+  }*/
   &__button {
     display: inline-block;
     background-color: transparent;
     border: none;
+    &:hover .nav__icon,
+    &:focus .nav__icon {
+      fill: $accent-color;
+    }
+    & .nav__icon--close {
+      display: none;
+    }
+
+    &.is-open .nav__icon--close {
+      display: block;
+    }
+
+    &.is-open .nav__icon--open {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
   &__icon {
     @extend %centered;
+    @include transition(fill);
   }
 }

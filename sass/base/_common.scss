@@ -8,6 +8,12 @@
 
 .page-body {
   margin: 0 auto;
-  font-family: $main-font-family;
-  letter-spacing: 0.03em;
+
+  &.modal--open {
+    overflow: hidden;
+  }
+}
+
+.section-title {
+  @extend %section-title;
 }
