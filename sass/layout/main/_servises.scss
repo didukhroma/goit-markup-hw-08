@@ -38,7 +38,7 @@
 
     padding: 27px 0;
 
-    @include font(700, 14px, 16px);
+    @include font($main-font-family, 700, 14px, 16px);
     text-transform: uppercase;
 
     color: $white-color;

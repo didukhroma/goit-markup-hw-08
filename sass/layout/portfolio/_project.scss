@@ -8,9 +8,11 @@
     width: 100%;
 
     @media screen and (min-width: 768px) {
-      width: calc((100% - 60px) / 2);
+      width: calc((100% - 2 * 30px) / 2);
     }
-    //max-width: calc((100% - 3 * 30px) / 3);
+    @media screen and (min-width: 1199px) {
+      width: calc((100% - 3 * 30px) / 3);
+    }
   }
 
   &__title {

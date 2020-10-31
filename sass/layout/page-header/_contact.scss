@@ -1,13 +1,29 @@
 .contact {
   @extend %list;
   @include font($main-font-family, 500, 18px, 21px, 0.02em);
-  /* &__item {
-    @extend %centered;
-  }*/
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    @include font($main-font-family, 500, 14px, 16px, 0.02em);
+  }
 
   &__item:not(:last-child) {
-    margin-bottom: 16px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 16px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 30px;
+    }
   }
+
   &__link {
     @extend %centered;
     text-decoration: none;
@@ -27,11 +43,5 @@
     margin-right: 10px;
 
     fill: currentColor;
-  }
-  @media screen and (min-width: 768px) {
-    @include font($main-font-family, 500, 14px, 16px, 0.02em);
-    &__item:not(:last-child) {
-      margin-bottom: 10px;
-    }
   }
 }
