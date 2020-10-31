@@ -1,9 +1,9 @@
 .filters {
-  //@extend %centered;
   @extend %list;
+  @extend %centered;
 
   @media screen and (max-width: 767px) {
-    display: flex;
+    justify-content: flex-start;
     flex-wrap: wrap;
 
     .filters__item:nth-child(-n + 3) {

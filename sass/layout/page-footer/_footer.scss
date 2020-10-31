@@ -22,7 +22,9 @@
     //flex-direction: column;
 
     min-width: 231px;
-    //margin-right: 70px;
+    @media screen and (min-width: 768px) {
+      margin-right: 165px;
+    }
   }
   &__logo {
     margin-bottom: 20px;
@@ -37,5 +39,11 @@
     //}
     //&__subscribe {
     // flex-grow: 1;
+  }
+  &__tablet {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: baseline;
+    }
   }
 }

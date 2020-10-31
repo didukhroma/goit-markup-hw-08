@@ -1,11 +1,36 @@
+@import "../../utils/placeholders";
 .site-nav {
   @extend %list;
   @include font($main-font-family, 500, 18px, 21px, 0.02em);
 
-  &__item:not(:last-child) {
-    margin-bottom: 32px;
+  @media screen and (max-width: 767px) {
+    &__item:not(:last-child) {
+      margin-bottom: 32px;
+    }
   }
+
+  @media screen and (min-width: 768px) {
+    @include font($main-font-family, 500, 14px, 16px, 0.02em);
+    display: flex;
+  }
+
+  &__item {
+    @media screen and (min-width: 768px) {
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+  }
+
   &__link {
+    display: inline-flex;
+    //@extend %link;
+    padding-bottom: 8px;
+
+    @media screen and (min-width: 768px) {
+      padding: 32px 0;
+    }
+
     text-decoration: none;
     color: $primary-text-color;
 
@@ -17,8 +42,6 @@
 
     &--current {
       position: relative;
-
-      padding: 8px 0;
 
       color: $accent-color;
 

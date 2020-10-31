@@ -12,6 +12,7 @@
   &__text--inverse {
     color: #ffffff;
   }
+
   @media screen and (min-width: $desktop) {
     @include font($secondary-font-family, 700, 26px, 31px);
   }

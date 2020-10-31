@@ -1,14 +1,20 @@
 @import "../../utils/mixins";
+@import "../../utils/placeholders";
 .nav {
-  //@extend %centered;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+
   &__wrapper {
-    @extend %centered;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
   }
-  /*&__logo {
-    // margin-right: auto;
-    // margin-right: 93px;
+  /* &__logo {
+    margin-right: auto;
   }*/
+
   &__button {
     display: inline-block;
     background-color: transparent;

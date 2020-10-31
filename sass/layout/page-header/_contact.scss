@@ -1,24 +1,37 @@
 .contact {
   @extend %list;
   @include font($main-font-family, 500, 18px, 21px, 0.02em);
+  /* &__item {
+    @extend %centered;
+  }*/
 
   &__item:not(:last-child) {
     margin-bottom: 16px;
   }
   &__link {
+    @extend %centered;
     text-decoration: none;
     color: $secondary-text-color;
+
+    @media screen and (min-width: 768px) {
+      justify-content: flex-start;
+    }
 
     @include transition(color);
     &:hover,
     &:focus {
       color: $accent-color;
     }
+  }
+  &__icon {
+    margin-right: 10px;
 
-    &__icon {
-      margin-right: 10px;
-
-      fill: currentColor;
+    fill: currentColor;
+  }
+  @media screen and (min-width: 768px) {
+    @include font($main-font-family, 500, 14px, 16px, 0.02em);
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
     }
   }
 }

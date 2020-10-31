@@ -1,11 +1,15 @@
 .project {
   // @extend %centered;
   @extend %list;
-  // flex-wrap: wrap;
+  flex-wrap: wrap;
 
   &__item {
     margin: 15px;
+    width: 100%;
 
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 60px) / 2);
+    }
     //max-width: calc((100% - 3 * 30px) / 3);
   }
 
@@ -79,5 +83,8 @@
       pointer-events: auto;
       transform: translateY(0%);
     }
+  }
+  &__img {
+    @extend %img;
   }
 }

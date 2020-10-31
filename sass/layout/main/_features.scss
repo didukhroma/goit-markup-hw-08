@@ -11,16 +11,27 @@
 
 .features-list {
   @extend %list;
+  display: flex;
+  flex-wrap: wrap;
   /*@extend %centered;*/
+  &--grid {
+    margin: -15px;
+  }
 
   &__item {
+    margin: 15px;
     /*
     text-align: ; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: calc((100% - 60px) / 3);*/
+    width: 100%;*/
+    @media screen and (min-width: 768px) {
+      max-width: calc((100% - 60px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: calc((100% - 120px) / 4);
+    }
 
     &:not(:last-child) {
       @media screen and (max-width: 767px) {
