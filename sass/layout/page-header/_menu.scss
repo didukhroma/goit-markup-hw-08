@@ -3,7 +3,7 @@
 .menu {
   background-color: $white-color;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $tablet - 1px) {
     padding: 60px 0;
     text-align: center;
     display: none;
@@ -33,7 +33,7 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -41,7 +41,7 @@
 
     &__site-nav {
       margin-right: 84px;
-      @media screen and (min-width: 1199px) {
+      @media screen and (min-width: $desktop - 1px) {
         margin-right: auto;
       }
     }

@@ -1,5 +1,4 @@
 .project {
-  // @extend %centered;
   @extend %list;
   flex-wrap: wrap;
 
@@ -7,10 +6,10 @@
     margin: 15px;
     width: 100%;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       width: calc((100% - 2 * 30px) / 2);
     }
-    @media screen and (min-width: 1199px) {
+    @media screen and (min-width: $desktop - 1px) {
       width: calc((100% - 3 * 30px) / 3);
     }
   }

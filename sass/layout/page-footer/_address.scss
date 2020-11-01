@@ -4,7 +4,7 @@
     @extend %list;
   }
   &__item:not(:last-child) {
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: $desktop - 1px) {
       margin-bottom: 8px;
     }
   }
@@ -28,7 +28,7 @@
   &__link:focus {
     color: $accent-color;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     text-align: start;
   }
 }

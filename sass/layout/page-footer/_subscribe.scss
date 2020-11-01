@@ -1,5 +1,5 @@
 .subscribe {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     display: flex;
     flex-direction: column;
     text-align: start;
@@ -11,7 +11,7 @@
   }
 
   width: 100%;
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     max-width: 450px;
   }
 
@@ -21,11 +21,11 @@
     flex-grow: 1;
     align-items: center;
 
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: $desktop - 1px) {
       margin-bottom: 20px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       margin-right: 12px;
     }
   }

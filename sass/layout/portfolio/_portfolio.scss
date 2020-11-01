@@ -1,14 +1,20 @@
 .portfolio {
   padding: 60px 0;
-  //padding-top: 94px;
-  // padding-bottom: 94px;
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   background-color: #ffffff;
 
   &__filters {
     margin-bottom: 40px;
-
-    //margin-bottom: 50px;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 50px;
+    }
   }
 
   &__project {

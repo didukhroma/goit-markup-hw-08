@@ -1,14 +1,14 @@
 .clients {
   padding: 60px 0;
   text-align: center;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
 
   &__title {
     margin-bottom: 30px;
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       margin-bottom: 50px;
     }
   }
@@ -29,10 +29,10 @@
     height: 90px;
     width: calc((100% - 60px) / 2);
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       width: calc((100% - 90px) / 3);
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       width: calc((100% - 180px) / 6);
     }
   }

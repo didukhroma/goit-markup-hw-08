@@ -2,24 +2,24 @@
   @extend %list;
   @include font($main-font-family, 500, 18px, 21px, 0.02em);
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     display: flex;
     align-items: center;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     @include font($main-font-family, 500, 14px, 16px, 0.02em);
   }
 
   &__item:not(:last-child) {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $tablet - 1px) {
       margin-bottom: 16px;
     }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
       margin-bottom: 10px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       margin-right: 30px;
     }
   }
@@ -31,7 +31,7 @@
     text-decoration: none;
     color: $secondary-text-color;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       justify-content: flex-start;
     }
 
