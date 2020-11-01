@@ -8,6 +8,7 @@
   }
 
   &__overlay {
+    max-width: 1600px;
     background-color: #c4c4c4;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background/bg-mobile.jpg");
     background-position: top center;
@@ -45,7 +46,7 @@
     color: $white-color;
 
     @media screen and (min-width: $desktop) {
-      @include font($main-font-family, 900, 44px, 60px);
+      @include font($main-font-family, 900, 44px, 60px, 0.06em);
 
       max-width: 696px;
     }

@@ -29,9 +29,7 @@
     color: $primary-text-color;
 
     cursor: pointer;
-    @include transition(background-color);
-    @include transition(color);
-    @include transition(border-color);
+    @include transition(all);
   }
 
   &__input {

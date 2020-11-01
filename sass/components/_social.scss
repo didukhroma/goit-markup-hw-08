@@ -15,8 +15,7 @@
 
     color: $icon-color;
 
-    @include transition(color);
-    @include transition(background-color);
+    @include transition(all);
   }
 
   &__item:not(:last-child) {

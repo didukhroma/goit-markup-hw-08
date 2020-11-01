@@ -74,9 +74,7 @@
     pointer-events: none;
 
     transform: translateY(100%);
-    @include transition(transform);
-    @include transition(opacity);
-    @include transition(visibility);
+    @include transition(all);
 
     .project__link:hover &,
     .project__link:focus & {

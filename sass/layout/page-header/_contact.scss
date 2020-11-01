@@ -25,7 +25,9 @@
   }
 
   &__link {
-    @extend %centered;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: $secondary-text-color;
 

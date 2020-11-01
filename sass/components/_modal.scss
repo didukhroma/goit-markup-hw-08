@@ -13,16 +13,14 @@
   visibility: visible;
   overflow-y: scroll;
 
-  @include transition(opacity);
-  @include transition(visibility);
+  @include transition(all);
 
   &--is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 
-    @include transition(opacity);
-    @include transition(visibility);
+    @include transition(all);
   }
   &--is-hidden .modal {
     transform: translate(-50%, -50%) scale(0);
@@ -36,8 +34,11 @@
   top: 50%;
 
   padding: 40px;
+  max-width: 450px;
 
-  //width: 528px;
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+  }
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
