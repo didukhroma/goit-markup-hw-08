@@ -41,7 +41,7 @@
 
     &__site-nav {
       margin-right: 84px;
-      @media screen and (min-width: $desktop - 1px) {
+      @media screen and (min-width: $desktop) {
         margin-right: auto;
       }
     }
