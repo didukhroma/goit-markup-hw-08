@@ -4,9 +4,11 @@
 
   @media screen and (max-width: 767px) {
     justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
+    margin-bottom: 25px;
 
-    .filters__item:nth-child(-n + 3) {
+    &__item {
       margin-bottom: 15px;
     }
   }

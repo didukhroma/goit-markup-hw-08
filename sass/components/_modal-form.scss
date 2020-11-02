@@ -109,11 +109,13 @@
   margin-bottom: 30px;
 
   &__label {
+    @media screen and (max-width: $mobile - 1px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
     display: inline-flex;
-    // padding-left: 12px;
 
     @include font($main-font-family, 400, 12px, 14px);
-    //@include font(400, 14px, 24px);
 
     color: $secondary-text-color;
     cursor: pointer;
@@ -121,6 +123,7 @@
   &__label::before {
     content: "";
     display: flex;
+    flex-shrink: 0;
 
     width: 15px;
     height: 15px;
@@ -150,21 +153,26 @@
     border-color: $accent-color;
   }
   &__link {
+    @media screen and (max-width: $mobile - 1px) {
+      text-decoration: underline;
+    }
     display: inline-flex;
     text-decoration: none;
     position: relative;
 
     color: $accent-color;
-  }
-  &__link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    @media screen and (min-width: $mobile) {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
 
-    width: 100%;
+        width: 100%;
 
-    height: 1px;
-    background-color: $accent-color;
+        height: 1px;
+        background-color: $accent-color;
+      }
+    }
   }
 }

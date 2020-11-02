@@ -35,9 +35,15 @@
   top: 50%;
 
   padding: 40px;
-  width: 450px;
+  @media screen and (max-width: $mobile - 1px) {
+    width: calc(100% - 30px);
+  }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $mobile) and (max-width: $desktop - 1px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
     width: 528px;
   }
 
@@ -82,14 +88,17 @@
   }
 
   &__slogan {
-    display: block;
+    display: inline-flex;
     text-align: center;
+    flex-grow: 1;
 
     margin-bottom: 12px;
 
     @include font($main-font-family, 700, 20px, 30px);
 
-    //@include font(700, 20px, 23px);
+    @media screen and (min-width: $desktop) {
+      @include font($main-font-family, 700, 20px, 23px);
+    }
 
     color: $primary-text-color;
   }
